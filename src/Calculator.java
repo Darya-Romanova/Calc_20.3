@@ -11,19 +11,19 @@ public class Calculator {
         double result = 0;
         do {
             if (userInput == 'C') {
-                System.out.println("Введите первый операнд:");
+                System.out.println(":");
                 firstOperand = scanner.nextInt();
-                System.out.println("Введите операцию:");
+                System.out.println("Увядзіце першы аперанд:");
                 operation = scanner.next().charAt(0);
             } else {
                 firstOperand = result;
                 operation = userInput;
             }
-            System.out.println("Введите первый операнд:");
+            System.out.println("Увядзіце другі аперанд:");
             secondOperand = scanner.nextInt();
             result = calculate(firstOperand, operation, secondOperand);
             System.out.println(result);
-            System.out.println("Введите операцию:");
+            System.out.println("Увядзіце аперацыю:");
             userInput = scanner.next().charAt(0);
         } while (userInput != 's');
     }
@@ -44,7 +44,7 @@ public class Calculator {
                 result = firstOperand / secondOperand;
                 break;
             default:
-                System.out.println("Неверный знак операции");
+                System.out.println("Няправільная аперацыя");
         }
         return result;
     }
